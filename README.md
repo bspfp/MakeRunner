@@ -24,3 +24,8 @@ C#으로 된 간단한 소스 파일을 컴파일 해서 실행 파일로 만드
 4. MakeRunner.cmd를 실행한다.
 
 5. 생성된 실행 파일의 이름을 적당히 바꾼 뒤 사용한다.
+
+## 아이콘
+
+- app.ico<br />
+  <a href="https://www.flaticon.com/free-icons/faq" title="faq icons">Faq icons created by Freepik - Flaticon</a>
