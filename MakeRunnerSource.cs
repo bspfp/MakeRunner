@@ -15,10 +15,9 @@ using System.Reflection;
 
 static class Runner {
 	static void Main() {
-		var psi = RunShellCommand("https://github.com/bspfp/MakeRunner", "Open");
+		// var psi = RunShellCommand("https://github.com/bspfp/MakeRunner", "Open");
 		// var psi = RunGUIApp("notepad.exe", "");
-		// var psi = RunConsoleApp("netstat.exe", "-anp tcp", true);
-		// var psi = RunConsoleApp("dir");
+		var psi = RunConsoleApp("\"D:\\RunSome.cmd\"", noWindow: true);
 		
 		// psi.WorkingDirectory = "<시작 폴더>";
 		Process.Start(psi);
@@ -40,12 +39,13 @@ static class Runner {
 		};
 	}
 	
-	static ProcessStartInfo RunConsoleApp(string filename, string arguments = "", bool keepConsole = false) {
+	static ProcessStartInfo RunConsoleApp(string filename, string arguments = "", bool keepConsole = false, bool noWindow = false) {
 		var cmdOpt = keepConsole ? "/K" : "/C";
 		return new ProcessStartInfo() {
 			FileName = "cmd.exe",
 			Arguments = cmdOpt + " " + filename + " " + arguments,
 			UseShellExecute = false,
+			CreateNoWindow = !keepConsole && noWindow
 		};
 	}
 }
