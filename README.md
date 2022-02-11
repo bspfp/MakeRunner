@@ -16,14 +16,13 @@ C#으로 된 간단한 소스 파일을 컴파일 해서 실행 파일로 만드
 
 1. MakeRunnerSource.cs 파일과 MakeRunner.cmd을 적당한 폴더에 넣는다
 
-2. 해당 폴더에 원하는 아이콘 파일을 app.ico로 넣는다
-
-3. MakeRunnerSource.cs 파일의 내용을 원하는 동작을 하게 수정한다
+2. MakeRunnerSource.cs 파일의 내용을 원하는 동작을 하게 수정한다<br />
    실행 파일의 설명 부분도 잘 적는다
 
-4. MakeRunner.cmd를 실행한다.
+3. MakeRunner.cmd를 실행한다.<br />
+   팁) 원하는 아이콘 파일(.ico)를 탐색기에서 드래그해서 MakeRunner.cmd에 드랍하면 해당 아이콘으로 실행 파일이 생성됨
 
-5. 생성된 실행 파일의 이름을 적당히 바꾼 뒤 사용한다.
+4. 생성된 실행 파일 Runner.exe의 이름을 적당히 바꾼 뒤 사용한다.
 
 ## 아이콘
 
