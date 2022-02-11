@@ -2,11 +2,11 @@
 using System.Diagnostics;
 using System.Reflection;
 
-[assembly: AssemblyTitle("개인 오피스")]
-[assembly: AssemblyDescription("개인 오피스 웹페이지 열기")]
+[assembly: AssemblyTitle("MakeRunner GitHub")]
+[assembly: AssemblyDescription("여기를 열기")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BSPFP")]
-[assembly: AssemblyProduct("개인 오피스")]
+[assembly: AssemblyProduct("MakeRunner")]
 [assembly: AssemblyCopyright("BSPFP 2022")]
 [assembly: AssemblyTrademark("BSPFP")]
 [assembly: AssemblyCulture("")]
@@ -15,7 +15,7 @@ using System.Reflection;
 
 static class Runner {
 	static void Main() {
-		var psi = RunShellCommand("https://bspfp.pe.kr", "Open");
+		var psi = RunShellCommand("https://github.com/bspfp/MakeRunner", "Open");
 		// var psi = RunGUIApp("notepad.exe", "");
 		// var psi = RunConsoleApp("netstat.exe", "-anp tcp", true);
 		// var psi = RunConsoleApp("dir");
