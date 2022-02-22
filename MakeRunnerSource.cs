@@ -16,7 +16,7 @@ using System.Reflection;
 static class Runner {
 	static string appArgs;
 	
-	static void Main() {
+	static int Main() {
 		InitAppArgs();
 		
 		// var psi = RunShellCommand("https://github.com/bspfp/MakeRunner", "Open");
@@ -25,7 +25,19 @@ static class Runner {
 		var psi = RunConsoleApp("dir", keepConsole: true, bypass: true);
 		
 		// psi.WorkingDirectory = "<시작 폴더>";
-		Process.Start(psi);
+		return StartProcess(psi);
+	}
+	
+	static int StartProcess(ProcessStartInfo psi, bool wait = false) {
+		if (wait) {
+			var p = Process.Start(psi);
+			p.WaitForExit();
+			return p.ExitCode;
+		}
+		else {
+			Process.Start(psi);
+			return 0;
+		}
 	}
 	
 	static ProcessStartInfo RunShellCommand(string filename, string verb = "Open") {
